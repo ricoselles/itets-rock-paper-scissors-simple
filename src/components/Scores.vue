@@ -1,11 +1,9 @@
 <template>
   <div v-if="sortedPlayers?.length > 2" class="max-w-xl2 mt-5 mx-auto">
-    <div class="pt-12 px-4 sm:px-6 lg:px-8 lg:pt-20">
-      <div class="text-center">
-        <p class="mt-2 text-3xl font-extrabold sm:text-4xl lg:text-5xl">
-          You won {{ wins }} games and lost {{ losses }} games
-        </p>
-      </div>
+    <div class="text-center">
+      <p class="mt-2 text-3xl font-extrabold sm:text-4xl lg:text-5xl">
+        You won {{ wins }} games and lost {{ losses }} games
+      </p>
     </div>
 
     <div class="mt-16 pb-12 lg:mt-20 lg:pb-20">

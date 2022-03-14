@@ -35,7 +35,6 @@
             font-extrabold
             text-gray-900
             sm:text-5xl sm:tracking-tight
-            lg:text-6xl
           "
         >
           {{ gameResult.isWinner ? 'You won' : 'You lost' }}
