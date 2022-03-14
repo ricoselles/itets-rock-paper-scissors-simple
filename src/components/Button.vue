@@ -27,6 +27,6 @@
 
 <script lang="ts" setup>
 const { type } = withDefaults(defineProps<{ type?: string }>(), {
-  type: 'submit',
+  type: 'button',
 });
 </script>

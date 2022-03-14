@@ -1,19 +1,10 @@
 export type Shape = 'rock' | 'paper' | 'scissor';
 
-export type PlayRoundResponse = {
-  id: string;
-  playerA: string;
-  playerB: string;
-  rounds: {
-    answerA: string;
-    answerB: string;
-  }[];
-};
-
-export type PlaySimpleResponse = {
-  winner: string;
-  shape: string;
+export type PlayResponse = {
+  isWinner: boolean;
+  playerShape: string;
   otherShape: string;
+  message: string;
 };
 
 export function useClient(
@@ -24,27 +15,8 @@ export function useClient(
       return get(baseUrl, '/GetPlayers');
     },
 
-    playRound(
-      gameId: string,
-      playerId: string,
-      shape: Shape
-    ): Promise<PlayRoundResponse | null> {
-      return post(baseUrl, '/PlayRound', { gameId, playerId, shape });
-    },
-
-    startGame(playerId: string): Promise<{ id: string } | null> {
-      return post(baseUrl, '/StartGame', { playerId });
-    },
-
-    registerPlayer(name: string): Promise<{ id: string } | null> {
-      return post(baseUrl, '/RegisterPlayer', { name });
-    },
-
-    playSimple(
-      playerName: string,
-      shape: Shape
-    ): Promise<PlaySimpleResponse | null> {
-      return post(baseUrl, '/PlaySimple', { playerName, shape });
+    play(playerName: string, shape: Shape): Promise<PlayResponse | null> {
+      return post(baseUrl, '/Play', { playerName, shape });
     },
   };
 }

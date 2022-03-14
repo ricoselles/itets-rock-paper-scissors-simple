@@ -59,7 +59,7 @@ const playerName = ref('Player 1');
 const gameResult = ref(null);
 
 const play = async (shape) => {
-  gameResult.value = await useClient().playSimple(playerName.value, shape);
+  gameResult.value = await useClient().play(playerName.value, shape);
 };
 
 const reset = () => {
