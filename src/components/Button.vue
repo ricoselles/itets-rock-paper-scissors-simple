@@ -8,7 +8,6 @@
       flex
       justify-center
       py-4
-      max-w-xs
       px-8
       border border-transparent
       text-base
