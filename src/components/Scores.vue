@@ -65,7 +65,7 @@
                   </div>
                 </div>
                 <div class="flex-1 flex flex-col">
-                  <div class="bg-white px-6 py-10">
+                  <div class="bg-white rounded-lg px-6 py-10">
                     <div>
                       <h3
                         class="text-center text-2xl font-medium text-gray-900"
@@ -138,7 +138,7 @@
                     </span>
                   </div>
                 </div>
-                <div class="bg-white rounded-t-lg px-6 pt-12 pb-10">
+                <div class="bg-white rounded-lg rounded-t-lg px-6 pt-12 pb-10">
                   <div>
                     <h3
                       class="
@@ -225,7 +225,7 @@
                   </div>
                 </div>
                 <div class="flex-1 flex flex-col">
-                  <div class="bg-white px-6 py-10">
+                  <div class="bg-white rounded-lg px-6 py-10">
                     <div>
                       <h3
                         class="text-center text-2xl font-medium text-gray-900"
