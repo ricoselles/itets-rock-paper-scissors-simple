@@ -279,7 +279,6 @@ import { useClient } from '../composables/client';
 import Title from './Title.vue';
 
 const props = defineProps<{ wins: number; losses: number }>();
-const { wins, losses } = toRefs(props);
 const players = ref(null);
 
 const sortedPlayers = computed(() => {
@@ -289,7 +288,7 @@ const sortedPlayers = computed(() => {
 });
 
 watch(
-  [wins, losses],
+  [() => props.wins, () => props.losses],
   async () => {
     players.value = await useClient().getPlayers();
   },
